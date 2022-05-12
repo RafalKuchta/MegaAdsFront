@@ -1,0 +1,5 @@
+.map {
+    background: gray;
+    height: calc(100vh - 48px);
+    width: 100vw;
+}
