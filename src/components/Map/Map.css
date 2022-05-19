@@ -3,3 +3,7 @@
     height: calc(100vh - 48px);
     width: 100vw;
 }
+
+.leaflet-container {
+    height: 100%;
+}
