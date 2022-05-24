@@ -22,5 +22,12 @@ button, .btn {
     button, .btn {
         padding: 1px 5px;
         font-size: 0.6rem;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 500px) {
+    button, .btn {
+        flex-direction: column;
     }
 }
