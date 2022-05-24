@@ -20,3 +20,34 @@ header h1 {
     width: 13em;
     margin-right: 5px;
 }
+
+
+@media (max-width: 640px) {
+    header h1 {
+        font-size: 15px;
+    }
+    .search input {
+        width: 10em;
+    }
+}
+
+@media (max-width: 500px) {
+    .search input {
+        width: 8em;
+    }
+}
+
+@media (max-width: 380px) {
+    header {
+        display: block;
+    }
+    .search input {
+        width: 8em;
+    }
+}
+
+@media (max-width: 180px) {
+    .search input {
+        width: 5em;
+    }
+}

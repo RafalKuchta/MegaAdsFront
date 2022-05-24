@@ -10,3 +10,17 @@ button, .btn {
     line-height: 22px;
     text-decoration: none;
 }
+
+@media (max-width: 640px) {
+    button, .btn {
+        padding: 1px 5px;
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 500px) {
+    button, .btn {
+        padding: 1px 5px;
+        font-size: 0.6rem;
+    }
+}
