@@ -21,14 +21,10 @@ button, .btn {
 
 @media (max-width: 500px) {
     button, .btn {
+        flex-direction: column;
         padding: 1px 5px;
         font-size: 0.6rem;
         margin-top: 5px;
-    }
-}
-
-@media (max-width: 500px) {
-    button, .btn {
-        flex-direction: column;
+        text-align: center;
     }
 }

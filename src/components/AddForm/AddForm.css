@@ -1,6 +1,10 @@
 .add-form {
-    width: 850px;
+    width: 70%;
     margin: 50px auto;
+}
+
+.add-form p {
+    padding: 0;
 }
 
 .add-form label {
@@ -15,12 +19,51 @@
 }
 
 .add-form input, .add-form textarea {
+    box-sizing: border-box;
+    border: 1px solid gray;
     width: 100%;
-    margin-top: 10px;
+    margin: 10px 0 0 0;
     padding: 10px;
 }
 
-.add-form button {
-    padding: 10px;
+.add-form button{
     width: 100%;
+    padding: 8px;
+}
+
+
+@media (max-width: 1000px) {
+    .add-form {
+        width: 70%;
+        margin: 5px auto;
+    }
+
+    .add-form h1{
+        font-size: 20px;
+    }
+
+    .add-form label {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        font-size: 15px;
+        font-width: bold;
+    }
+
+
+
+    .add-form label small {
+        font-weight: normal;
+    }
+
+    .add-form {
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    .add-form button {
+        padding: 10px;
+        width: 100%;
+        flex-direction: row;
+    }
 }

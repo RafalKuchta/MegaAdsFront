@@ -107,7 +107,7 @@ export const AddForm = () => {
                         maxLength={999999}
                         value={form.price}
                         onChange={e => updateForm('price', Number(e.target.value))}
-                    />
+                    /><br/>
                     <small>Pozostaw 0 w polu, aby nie wyświetlać ceny.</small>
                 </label>
             </p>
@@ -136,7 +136,7 @@ export const AddForm = () => {
                 </label>
             </p>
             <p>
-                <Btn text="Zapisz"/>
+                <Btn text="Zapisz" />
             </p>
 
         </form>
