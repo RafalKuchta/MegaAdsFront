@@ -27,7 +27,9 @@ export const Map = () => {
 
     return (
         <div className='map'>
-            <MapContainer center={[52.3781118564998, 21.00736561259326]} zoom={20} scrollWheelZoom={false}>
+            <MapContainer
+                center={[52.3781118564998, 21.00736561259326]}
+                zoom={20} scrollWheelZoom={true}>
                 <TileLayer
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
