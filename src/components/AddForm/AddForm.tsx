@@ -1,5 +1,5 @@
 import React, {SyntheticEvent, useState} from "react";
-import { geocode } from "../../utils/geocodding";
+import {geocode} from "../../utils/geocodding";
 import {Btn} from "../common/Btn";
 import {apiUrl} from "../../config/api";
 
@@ -60,10 +60,10 @@ export const AddForm = () => {
         return <h2>Trwa dodawanie ogłoszenia...</h2>
     }
 
-    if(id){
+    if (id) {
         return (
             <>
-            <h2>Twoje ogłoszenie "{form.name}" zostało poprawnie dodane do serwisu pod ID: {id}</h2>
+                <h2>Twoje ogłoszenie "{form.name}" zostało poprawnie dodane do serwisu pod ID: {id}</h2>
                 <p><a href="/add">Dodaj kolejne ogłoszenie</a></p>
                 <p><a href="/">Powrót</a></p>
             </>
@@ -71,74 +71,78 @@ export const AddForm = () => {
     }
 
     return (
-        <form action="" className="add-form" onSubmit={saveAd}>
-            <h1>Dodawanie ogłoszenia</h1>
-            <p>
-                <label>
-                    Nazwa: <br/>
-                    <input
-                        type="text"
-                        name="name"
-                        required
-                        maxLength={99}
-                        value={form.name}
-                        onChange={e => updateForm('name', e.target.value)}
-                    />
-                </label>
-            </p>
-            <p>
-                <label>
-                    Opis: <br/>
-                    <textarea
-                        name="description"
-                        maxLength={999}
-                        value={form.description}
-                        onChange={e => updateForm('description', e.target.value)}
-                    />
-                </label>
-            </p>
-            <p>
-                <label>
-                    Cena: <br/>
-                    <input
-                        type="number"
-                        name="price"
-                        required
-                        maxLength={999999}
-                        value={form.price}
-                        onChange={e => updateForm('price', Number(e.target.value))}
-                    /><br/>
-                    <small>Pozostaw 0 w polu, aby nie wyświetlać ceny.</small>
-                </label>
-            </p>
-            <p>
-                <label>
-                    Adrs URL: <br/>
-                    <input
-                        type="url"
-                        name="url"
-                        maxLength={99}
-                        value={form.url}
-                        onChange={e => updateForm('url', e.target.value)}
-                    />
-                </label>
-            </p>
-            <p>
-                <label>
-                    Adres fizyczny na mapie: <br/>
-                    <input
-                        type="text"
-                        name="address"
-                        required
-                        value={form.address}
-                        onChange={e => updateForm('address', e.target.value)}
-                    />
-                </label>
-            </p>
-            <p>
-                <Btn text="Zapisz" />
-            </p>
-
-        </form>
+        <>
+            <form action="" className="add-form" onSubmit={saveAd}>
+                <h1>Dodawanie ogłoszenia</h1>
+                <p>
+                    <label>
+                        Nazwa: <br/>
+                        <input
+                            type="text"
+                            name="name"
+                            required
+                            maxLength={99}
+                            value={form.name}
+                            onChange={e => updateForm('name', e.target.value)}
+                        />
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Opis: <br/>
+                        <textarea
+                            name="description"
+                            maxLength={999}
+                            value={form.description}
+                            onChange={e => updateForm('description', e.target.value)}
+                        />
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Cena: <br/>
+                        <input
+                            type="number"
+                            name="price"
+                            required
+                            maxLength={999999}
+                            value={form.price}
+                            onChange={e => updateForm('price', Number(e.target.value))}
+                        /><br/>
+                        <small>Pozostaw 0 w polu, aby nie wyświetlać ceny.</small>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Adrs URL: <br/>
+                        <input
+                            type="url"
+                            name="url"
+                            maxLength={99}
+                            value={form.url}
+                            onChange={e => updateForm('url', e.target.value)}
+                        />
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Adres fizyczny na mapie: <br/>
+                        <input
+                            type="text"
+                            name="address"
+                            required
+                            value={form.address}
+                            onChange={e => updateForm('address', e.target.value)}
+                        />
+                    </label>
+                </p>
+                <p>
+                    <Btn text="Zapisz"/>
+                </p>
+            </form>
+            <div className="back">
+                <Btn text="Powrót" to={"/"}/>
+            </div>
+        </>
     )
 }

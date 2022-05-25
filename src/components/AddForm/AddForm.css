@@ -1,6 +1,11 @@
-.add-form {
+.add-form, .back {
     width: 70%;
-    margin: 50px auto;
+    margin: 50px auto 5px auto;
+}
+
+div.back {
+    width: 70%;
+    margin: 5px auto;
 }
 
 .add-form p {
@@ -27,6 +32,13 @@
 }
 
 .add-form button{
+    width: 100%;
+    padding: 8px;
+}
+
+.back a {
+    display: block;
+    box-sizing: border-box;
     width: 100%;
     padding: 8px;
 }
